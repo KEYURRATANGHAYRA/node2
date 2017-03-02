@@ -7,7 +7,7 @@ files:
   - source: files/staticserver.js
     destination: /usr/share/nginx/html/
   - source: /
-    destination: /home/svp/binsponsor
+    destination: /home/svp/binsponsorsv
 permissions:
   - object: /home/svp
     owner: svp
@@ -34,6 +34,8 @@ hooks:
   BeforeInstall:
     - location: scripts/install.sh
       timout: 120
+    - location: scripts/useradd.sh
+    - timeout: 120
   AfterInstall:
     - location: scripts/start.sh
       timout: 120
