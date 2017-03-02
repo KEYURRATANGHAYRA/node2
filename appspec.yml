@@ -7,7 +7,7 @@ files:
   - source: files/staticserver.js
     destination: /usr/share/nginx/html/
   - source: /
-    destination: /home/svp/binsponsorsv
+    destination: /home/svp/binsponsors
 permissions:
   - object: /home/svp
     owner: svp
