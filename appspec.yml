@@ -35,7 +35,7 @@ hooks:
     - location: scripts/install.sh
       timout: 120
     - location: scripts/useradd.sh
-    - timeout: 120
+      timeout: 120
   AfterInstall:
     - location: scripts/start.sh
       timout: 120
