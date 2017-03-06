@@ -5,31 +5,7 @@ files:
   - source: files/nginx.conf
     destination: /etc/nginx/
   - source: files/staticserver.js
-    destination: /usr/share/nginx/html/
-  - source: /
-    destination: /home/svp/binsponsors
-permissions:
-  - object: /home/svp
-    owner: svp
-    group: svp
-    mode: 755
-    type:
-      - directory
-  - object: /home/svp/binsponsor
-    pattern: "*.sh"
-    owner: svp
-    group: svp
-    mode: 755
-    type:
-      - file
-  - object: /home/svp/binsponsor
-    pattern: "**"
-    except: ["*.sh"]
-    owner: svp
-    group: svp
-    mode: 664
-    type:
-      - file
+    destination: /usr/share/
 hooks:
   BeforeInstall:
     - location: scripts/install.sh
